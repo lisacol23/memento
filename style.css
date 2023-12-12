@@ -1,0 +1,30 @@
+/* Per WebKit (Chrome, Safari, nuove versioni di Edge) */
+/* Nota: Puoi personalizzare i valori di width e color */
+::-webkit-scrollbar {
+    width: 8px; /* Larghezza della barra di scorrimento */
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #db6c34; /* Colore della barra di scorrimento stessa */
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff; /* Colore della traccia della barra di scorrimento */
+}
+
+/* Per Firefox */
+/* Nota: Puoi personalizzare i valori di width e color */
+::-moz-scrollbar {
+    width: 12px; /* Larghezza della barra di scorrimento */
+}
+
+::-moz-scrollbar-thumb {
+    background-color: #d67335; /* Colore della barra di scorrimento stessa */
+}
+
+::-moz-scrollbar-track {
+    background-color: #f1f1f1; /* Colore della traccia della barra di scorrimento */
+}
+
