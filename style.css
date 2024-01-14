@@ -189,7 +189,7 @@
 
   .box-container {
     position: fixed;
-    top: 100px;
+    top: 20px;
     z-index: 1;
     padding: 1em;
     display: flex;
@@ -202,16 +202,16 @@
     .left-column {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 3px;
       }
       .right-column {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 3px;
       }
       .box {
-        width: 25px;
-        height: 25px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         border: 1px solid rgb(210, 79, 44);
       }
