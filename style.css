@@ -70,6 +70,9 @@
   }
 
   footer {
+
+ right: 50px;
+ bottom: 20%;
     background-color: #aaa;
     color: #fff;
     text-align: center;
@@ -80,7 +83,7 @@
     margin-left: 500px;
     display: inline-block;
   }
-
+ 
   .movie-image {
     margin-left: 500px;
     display: inline-block;
@@ -196,6 +199,11 @@
       object-fit: contain;
       display: none;
     }
+    .imgt{
+      width: 150%;
+      height: 100%;
+      object-fit: contain;
+    }
     
   #cambioimmagine {
   }
@@ -253,5 +261,6 @@
     to{
       opacity: 1;
     }
+    
   }
 
