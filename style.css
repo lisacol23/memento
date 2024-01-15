@@ -184,6 +184,27 @@
       height: 100%;
       object-fit: contain;
     }
+    .img1{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .img2{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: none;
+    }
+    
+  #cambioimmagine {
+  }
+  #cambioimmagine:hover .img1 {
+       display: none;
+  }
+  #cambioimmagine:hover .img2 {
+       display: block;
+  }
   }
 
 
@@ -233,3 +254,4 @@
       opacity: 1;
     }
   }
+
