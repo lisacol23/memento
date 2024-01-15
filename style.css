@@ -73,7 +73,7 @@
 
  right: 50px;
  bottom: 20%;
-    background-color: #aaa;
+    background-color: rgb(210, 79, 44);;
     color: #fff;
     text-align: center;
     padding: 1em 0;
@@ -252,6 +252,7 @@
   .is-active{
     animation: 1s appear forwards;
   }
+ 
 
 
   @keyframes appear {
