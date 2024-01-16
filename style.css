@@ -247,12 +247,21 @@
       .box.active {
         background-color: rgb(210, 79, 44);
       }
+      .box2 {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid rgb(42, 42, 42);
+      }
+      .box2.active {
+        background-color: rgb(42, 42, 42);
+      }
     }
 
   .is-active{
     animation: 1s appear forwards;
   }
- 
+
 
 
   @keyframes appear {
