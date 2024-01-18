@@ -28,6 +28,53 @@
     background-color: #f1f1f1; /* Colore della traccia della barra di scorrimento */
 }
 
+
+
+
+
+ul#menu {
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  z-index: 1;
+  background-color: #5c3232;
+
+}
+
+ul#menu li {
+  background-color: #ffffff;
+  border-bottom: 5px solid #ffffff;
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 2px;
+  position: relative;
+  float: left; /* elementi su singola riga */
+}
+
+ul#menu li a {
+  color: #000000;
+  font-family: "stevie-sans", sans-serif;                                        
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  line-height: 30px;
+  text-decoration: none;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+}
+
+ul#menu li:hover {
+  font-size: 20px;
+  background-color: #ffffff;
+  border-bottom: 5px solid rgb(210, 79, 44);
+}
+
+
+
+
 #titolo {
     height: 100%;
     width: 100%;
@@ -82,7 +129,7 @@
 
  right: 50px;
  bottom: 20%;
-    background-color: rgb(210, 79, 44);;
+    background-color: rgb(210, 79, 44);
     color: #fff;
     text-align: center;
     padding: 1em 0;
