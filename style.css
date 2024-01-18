@@ -27,6 +27,7 @@
 ::-moz-scrollbar-track {
     background-color: #f1f1f1; /* Colore della traccia della barra di scorrimento */
 }
+
 .line-container {
   position: fixed;
   top: 150px;
@@ -36,6 +37,7 @@
   text-align: center;
   overflow: hidden;
 }
+
 ul#menu {
   margin: 0;
   padding: 0;
