@@ -28,6 +28,39 @@
     background-color: #f1f1f1; /* Colore della traccia della barra di scorrimento */
 }
 
+ul#menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul#menu li {
+  background-color: #ffffff;
+  border-bottom: 5px solid #ffffff;
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 2px;
+  float: left; /* elementi su singola riga */
+}
+ul#menu li a {
+  color: #000000;
+  font-family: "stevie-sans", sans-serif;                                        
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  line-height: 30px;
+  text-decoration: none;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+}
+ul#menu li.active, ul#menu li:hover {
+  background-color: #ffffff;
+  border-bottom: 5px solid rgb(210, 79, 44);
+}
+
+
+
 #titolo {
     height: 100%;
     width: 100%;
