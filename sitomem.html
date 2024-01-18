@@ -30,10 +30,41 @@
       <img id="titolo" src="titolo.png" />
 
 
+      
+      <div class="line-container">
+        <svg viewBox="0 0 5989 17784" fill="none" preserveAspectRatio="xMidYMax meet">
+          <path d="M1 5C1863.73 135.442 5661.68 819.492 5951.69 2512.16C6314.2 4627.99 3529.11 1455.27 2461.08 1807.56C1393.04 2159.86 806.026 3153.07 733.023 3508.44C660.021 3863.82 705.523 4611.55 1051.03 4573.55C1396.54 4535.55 3206.1 3246.53 4070.13 3825.82C4934.16 4405.1 4451.64 5599.62 4388.14 5749.58C4324.64 5899.54 3743.12 6572.29 3906.62 6871.18C4070.13 7170.06 4360.64 7095.09 4288.14 7412.46C4215.63 7729.83 3588.61 8084.18 3861.12 9261.24C4133.63 10438.3 5089.16 11932.7 4934.16 12624C4779.15 13315.2 2297.07 13969.5 1515.05 11615.4C889.428 9732.07 1193.7 12760.9 1424.05 14510.8C1690.72 15556.4 2535.08 17673.8 3779.12 17779" stroke="#FF7A00" stroke-width="10"/>
+          </svg>
+      </div>
+      <script>
+
+        let path = document.querySelector ("path")
+        let pathLength = path.getTotalLength()
+
+        path.style.strokeDasharray = pathLength + " " + pathLength;
+
+        path.style.strokeDashoffset = pathLength;
+
+        window.addEventListener("scroll", () => {
+
+          // what % down is it?
+          var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+          
+          // Length to offset the dashes
+          var drawLength = pathLength * scrollPercentage;
+
+          // Draw in reverse
+          path.style.strokeDashoffset = pathLength - drawLength;
+
+        })
+        
+      </script>
+
       <main>
         <nav>
           <a href="https://github.com/russellgoldenberg/scrollama"></a>
         </nav>
+       
       <section id="scrolly">
         <div class="sticky-thing">
           <svg class="orange-lines"></svg>
