@@ -262,8 +262,6 @@ ul#menu li:hover {
       object-fit: contain;
     }
     
-  #cambioimmagine {
-  }
   #cambioimmagine:hover .img1 {
        display: none;
   }
