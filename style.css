@@ -28,6 +28,17 @@
     background-color: #f1f1f1; /* Colore della traccia della barra di scorrimento */
 }
 
+nav{
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .line-container {
   position: fixed;
   top: 150px;
@@ -39,17 +50,17 @@
 }
 
 ul#menu {
-  margin: 0;
-  padding: 0;
+  position: fixed;
+  z-index: 1;
+  padding: 10px;
   list-style: none;
+  height: 30px;
 }
 ul#menu li {
   background-color: #ffffff;
   border-bottom: 5px solid #ffffff;
   display: block;
   width: 150px;
-  height: 30px;
-  margin: 2px;
   float: left; /* elementi su singola riga */
 }
 ul#menu li a {
@@ -159,6 +170,7 @@ ul#menu li.active, ul#menu li:hover {
   }
 
   article {
+    margin-top: 500px;
     position: relative;
     padding: 0;
     max-width: 35rem;
