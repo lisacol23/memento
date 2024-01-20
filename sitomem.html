@@ -9,173 +9,205 @@
     <meta name="description" content="Scrollama: Sticky Overlay Example" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/etl6wzo.css">
+    <link rel="stylesheet" href="https://use.typekit.net/etl6wzo.css" />
   </head>
 
   <body>
     <script src="slides.js" defer></script>
     <script src="memento.js"></script>
-   
 
- <nav>
-    <ul id="menu">
-      <li><a href="#intro">INTRO</a></li>
-      <li><a href="#grafico">GRAFICO</a></li>
-      <li><a href="#evidenze">EVIDENZE</a></li>
-      <li><a href="#conclusione">CONCLUSIONE</a></li>
-  </ul>
-</nav>
+    <nav>
+      <ul id="menu">
+        <li><a href="#intro">INTRO</a></li>
+        <li><a href="#grafico">GRAFICO</a></li>
+        <li><a href="#evidenze">EVIDENZE</a></li>
+        <li><a href="#conclusione">CONCLUSIONE</a></li>
+      </ul>
+    </nav>
 
+    <br /><br />
 
-<br /><br />
+    <img id="titolo" src="figo.mp4" autoplay="0" />
 
-      <img id="titolo" src="figo.mp4" autoplay="0"/>
+    <br /><br />
+    <br /><br />
+    <br /><br />
+    <br /><br />
 
+    <div class="line-container">
+      <svg
+        width="1144"
+        height="375"
+        viewBox="0 0 1144 375"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.5 1.99935C225.075 -0.575318 1052.8 75.4186 1130.06 113.638C1207.33 151.858 890.57 129.563 722.532 113.638C478.326 101.909 34.2021 90.5233 211.349 138.813C388.496 187.102 593.491 169.041 673.845 153.974C717.556 144.725 834.031 131.775 950.245 153.974C1095.51 181.724 840.313 164.273 895.279 181.724C950.245 199.174 1185.81 219.771 1068.03 234.647C950.245 249.523 -133.368 237.222 94.3477 307.596C276.52 363.895 704.207 374.537 895.279 372.821"
+          stroke="#FF7A00"
+          stroke-width="3"
+        />
+      </svg>
+    </div>
+    <script>
+      let path = document.querySelector("path");
+      let pathLength = path.getTotalLength();
 
-      <br /><br /> 
-      <br /><br />
-      <br /><br />
-      <br /><br />
+      path.style.strokeDasharray = pathLength + " " + pathLength;
 
+      path.style.strokeDashoffset = pathLength;
 
-      
-      <div class="line-container">
-        <svg width="1144" height="375" viewBox="0 0 1144 375" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.5 1.99935C225.075 -0.575318 1052.8 75.4186 1130.06 113.638C1207.33 151.858 890.57 129.563 722.532 113.638C478.326 101.909 34.2021 90.5233 211.349 138.813C388.496 187.102 593.491 169.041 673.845 153.974C717.556 144.725 834.031 131.775 950.245 153.974C1095.51 181.724 840.313 164.273 895.279 181.724C950.245 199.174 1185.81 219.771 1068.03 234.647C950.245 249.523 -133.368 237.222 94.3477 307.596C276.52 363.895 704.207 374.537 895.279 372.821" stroke="#FF7A00" stroke-width="3"/>
-          </svg>
-          
+      window.addEventListener("scroll", () => {
+        // what % down is it?
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        // Length to offset the dashes
+        var drawLength = pathLength * scrollPercentage;
+
+        // Draw in reverse
+        path.style.strokeDashoffset = pathLength - drawLength;
+      });
+    </script>
+
+    <a name="intro"></a>
+    <p></p>
+    <br /><br />
+    <br /><br />
+    <br /><br />
+
+    <article>
+      <div class="step11">
+        <p>
+          Oggi considerato come uno dei film <br />più importanti del nuovo
+          millennio, <br />nel 2002 ricevette anche le candidature <br />ai
+          premi <font color="d24f2c"><b>Oscar</b></font> per miglior
+          sceneggiatura originale <br />e miglior montaggio.
+        </p>
       </div>
-      <script>
 
-        let path = document.querySelector ("path")
-        let pathLength = path.getTotalLength()
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <div class="step2">
+        <p>
+          I protagonisti dei film di Nolan <br />presentano sempre un rapporto
+          complesso <br />con <font color="d24f2c"><b>realtà</b></font> e
+          <font color="d24f2c"><b>memoria</b></font
+          >, e il regista si diverte a raccontarne <br />le gesta giocando con
+          il tempo, o per meglio dire,<br />
+          utilizzando una struttura temporale non lineare.
+        </p>
+      </div>
 
-        path.style.strokeDasharray = pathLength + " " + pathLength;
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-        path.style.strokeDashoffset = pathLength;
+      <br /><br /><br /><br />
+      <div class="step12">
+        <p>
+          Leonard Shelby in Memento <br />
+          mette in discussione i suoi <font color="d24f2c"><b>ricordi</b></font
+          >, <br />
+          il tempo continua a giocare <br />
+          un ruolo chiave nella storia.
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-        window.addEventListener("scroll", () => {
+      <br /><br /><br /><br />
+      <div class="step2">
+        <p>
+          Il regista ci fa credere che ci dobbiamo fidare <br />
+          solo dei <font color="d24f2c"><b>tatuaggi</b></font> e delle
+          <font color="d24f2c"><b>polaroid</b></font
+          >, <br />
+          dati come <font color="d24f2c"><b>evidenze</b></font
+          >, perché il protagonista <br />
+          non avendo memoria a lungo termine <br />
+          li utilizza come strumenti che gli permettono <br />di orientarsi
+          nella vita quotidiana.
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br />
+      <div class="stepcg">
+        <p>Ma possiamo ritenere questi dati davvero oggettivi?</p>
+        <!-- al centro grande-->
+      </div>
+      <br /><br /><br /><br />
+      <br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <div class="stepc">
+        <p>
+          Per capirlo, o almeno provarci, abbiamo provato a rileggere la storia
+          da un punto di vista diverso...
+        </p>
+        <!-- al centro grande-->
+      </div>
+      <br /><br /><br /><br />
+      <br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <div class="stepcg">
+        <p>Partiamo dal montaggio di Nolan</p>
+        <!-- al centro grande-->
+      </div>
+      <br /><br /><br /><br />
+      <br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
 
-          // what % down is it?
-          var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-          
-          // Length to offset the dashes
-          var drawLength = pathLength * scrollPercentage;
+      <div class="step13">
+        <p>
+          Il <font color="d24f2c"><b>montaggio</b></font> prevede che la storia
+          <br />
+          alterni ogni 15 minuti una scena <br />
+          cronologicamente opposta alla precedente. <br />La pellicola parte
+          quindi dalla fine <br />
+          e si conclude poco dopo la metà,<br />
+          alternando scene in bianco e nero e a colori.
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </article>
 
-          // Draw in reverse
-          path.style.strokeDashoffset = pathLength - drawLength;
+    <a name="grafico"></a>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <img id="schema" src="schema.jpg" />
 
-        })
-        
-      </script>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <article>
+      <div class="stepcg">
+        <p>
+          Ci siamo chiesti: quanto la soggettività del protagonista interferisce
+          con la presunta veridicità delle evidenze?
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-<a name="intro"></a>
-<p></p>
-<br /><br /> 
-<br /><br />
-<br /><br />
-
-<article>
-  <div class="step11" >
-    <p>
-      Oggi considerato come uno dei film <br>più importanti del nuovo
-      millennio, <br>nel 2002 ricevette anche le candidature <br>ai premi <font color="d24f2c"><b>Oscar</b></font>
-      per miglior sceneggiatura originale <br>e miglior montaggio.
-    </p>
-  </div>
-
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-  <br /><br /><br /><br />
-  <div class="step2" >
-    <p>
-      I protagonisti dei film di Nolan <br>presentano sempre un rapporto
-      complesso <br>con <font color="d24f2c"><b>realtà</b></font> e <font color="d24f2c"><b>memoria</b></font>, e il regista si diverte a
-      raccontarne <br>le gesta giocando con il tempo, o per meglio dire,<br>
-      utilizzando una struttura temporale non lineare.
-    </p>
-  </div>
-
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-  <br /><br /><br /><br />
-  <div class="step12" >
-    <p>
-      Leonard Shelby in Memento <br> mette in discussione i suoi <font color="d24f2c"><b>ricordi</b></font>, <br> il
-      tempo continua a giocare <br> un ruolo chiave nella storia.
-    </p>
-  </div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-  <br /><br /><br /><br />
-  <div class="step2" >
-    <p>
-      Il regista ci fa credere che ci dobbiamo fidare <br> solo dei <font color="d24f2c"><b>tatuaggi</b></font>
-      e delle <font color="d24f2c"><b>polaroid</b></font>, <br> dati come <font color="d24f2c"><b>evidenze</b></font>, perché il protagonista <br> non
-      avendo memoria a lungo termine <br> li utilizza come strumenti che gli
-      permettono <br>di orientarsi nella vita quotidiana.
-    </p>
-  </div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-  <br /><br /><br /><br /><br />
-  <div class="stepcg" >
-    <p>
-      Ma possiamo ritenere questi dati davvero oggettivi?
-    </p>
-    <!-- al centro grande-->
-  </div>
-  <br /><br /><br /><br /> <br />
-  <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br />
-  <div class="stepc" >
-    <p>
-      Per capirlo, o almeno provarci, abbiamo provato a rileggere la storia da un punto di vista diverso...
-    </p>
-    <!-- al centro grande-->
-  </div>
-  <br /><br /><br /><br /> <br />
-  <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br />
-  <div class="stepcg" >
-  <p>
-Partiamo dal montaggio di Nolan
-  </p>
-  <!-- al centro grande-->
-</div>
-<br /><br /><br /><br /> <br />
-<br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br />
-
-  <div class="step13" >
-    <p>
-      Il <font color="d24f2c"><b>montaggio</b></font> prevede che la storia <br> alterni ogni 15 minuti una
-      scena <br> cronologicamente opposta alla precedente. <br>La pellicola parte
-      quindi dalla fine <br> e si conclude poco dopo la metà,<br> alternando
-      scene in bianco e nero e a colori.
-    </p>
-  </div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-</article>
-
-<a name="grafico"></a>
-<p></p><p></p><p></p><p></p><p></p>
-<img id="schema" src="schema.jpg" />
-
-  <br /><br /><br /><br />
-  <br /><br /><br /><br /> <br /><br /><br /><br />
-  <article>  
-  <div class="stepcg" >
-    <p>
-  Ci siamo chiesti: quanto la soggettività del protagonista interferisce con la presunta veridicità delle evidenze?
-    </p>
-  </div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-  <br /><br /><br /><br />
-  <div class="step11" >
-    <p>
-      Adesso ti proponiamo un'analisi delle scene <br> ricostruendo l'<font color="d24f2c"><b>ordine cronologico</b></font> degli eventi, <br> attraverso una rilettura delle evidenze: polaroid e tatuaggi,<br>
-      che rappresentano l'unico punto di riferimento oggettivo <br> per il protagonista.
-    </p>
-  </div>
-</article>
-
+      <br /><br /><br /><br />
+      <div class="step11">
+        <p>
+          Adesso ti proponiamo un'analisi delle scene <br />
+          ricostruendo l'<font color="d24f2c"><b>ordine cronologico</b></font>
+          degli eventi, <br />
+          attraverso una rilettura delle evidenze: polaroid e tatuaggi,<br />
+          che rappresentano l'unico punto di riferimento oggettivo <br />
+          per il protagonista.
+        </p>
+      </div>
+    </article>
 
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script type="text/javascript">
@@ -672,33 +704,19 @@ Partiamo dal montaggio di Nolan
       init();
     </script>
 
-
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-
-
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <!-- INIZIO PARTE POLAROID-->
     <a name="evidenze"></a>
 
     <section id="content">
-      
-      
       <div class="image-container">
         <div class="section active" id="section0">
           <div class="img-container">
             <img
-              src="polaroidtattoo/teddyaterra.jpg"
-              alt="Memento Imagen 1"
-              class="img"
-            />
-          </div>
-        </div>
-        <div class="section" id="section1">
-          <div class="img-container">
-            <img
-              src="polaroidtattoo/p6v.jpg"
+              src="polaroidtattoo/C.mortoocchiali.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
@@ -707,42 +725,51 @@ Partiamo dal montaggio di Nolan
         <div class="section" id="section2">
           <div class="img-container">
             <img
-              src="polaroidtattoo/p2+s.jpg"
+              src="polaroidtattoo/C.teddytelefono.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
           </div>
         </div>
-        <div class="section" id="section3">
+        <div class="section" id="section4">
           <div class="img-container">
             <img
-              src="polaroidtattoo/p1v.jpg"
+              src="polaroidtattoo/C.jaguar.jpg"
+              alt="Memento Imagen 1"
+              class="img"
+            />
+          </div>
+        </div>
+        <div class="section" id="section4">
+          <div class="img-container">
+            <img
+              src="polaroidtattoo/C.teddytelefono.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
           </div>
         </div>
         <br /><br /><br /><br />
-        <div class="section" id="section4">
-          <div class="img-container">
-            <div id="cambioimmagine">
-            <img
-              src="polaroidtattoo/p7v.jpg"
-              alt="Memento Imagen 1"
-              class="img1"
-            />
-            <img
-            src="polaroidtattoo/p9v.jpg"
-            alt="Memento Imagen 1"
-            class="img2"
-          />
-        </div>
-          </div>
-        </div>
         <div class="section" id="section5">
           <div class="img-container">
+            <div id="cambioimmagine">
+              <img
+                src="polaroidtattoo/remember.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/p9v.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="section" id="section6">
+          <div class="img-container">
             <img
-              src="polaroidtattoo/p6v.jpg"
+              src="polaroidtattoo/C.teddytelefono.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
@@ -751,16 +778,16 @@ Partiamo dal montaggio di Nolan
         <div class="section" id="section6">
           <div class="img-container">
             <img
-              src="polaroidtattoo/tattoo4.jpg"
+              src="polaroidtattoo/thefacts.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
           </div>
         </div>
-        <div class="section" id="section7">
+        <div class="section" id="section6">
           <div class="img-container">
             <img
-              src="polaroidtattoo/p5v.jpg"
+              src="polaroidtattoo/remember.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
@@ -769,16 +796,16 @@ Partiamo dal montaggio di Nolan
         <div class="section" id="section8">
           <div class="img-container">
             <img
-              src="polaroidtattoo/p5v.jpg"
+              src="polaroidtattoo/C.Inn.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
           </div>
         </div>
-        <div class="section" id="section9">
+        <div class="section" id="section8">
           <div class="img-container">
             <img
-              src="polaroidtattoo/p5v.jpg"
+              src="polaroidtattoo/C.jaguar.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
@@ -787,44 +814,272 @@ Partiamo dal montaggio di Nolan
         <div class="section" id="section10">
           <div class="img-container">
             <img
-              src="polaroidtattoo/p5v.jpg"
+              src="polaroidtattoo/findhim.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
           </div>
         </div>
-        <div class="section" id="section11">
+        <div class="section" id="section10">
           <div class="img-container">
             <img
-              src="polaroidtattoo/p5v.jpg"
+              src="polaroidtattoo/house.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
           </div>
         </div>
-        <div class="section" id="section12">
+        <div class="section" id="section10">
           <div class="img-container">
             <img
-              src="polaroidtattoo/p5v.jpg"
+              src="polaroidtattoo/fact5.jpg"
               alt="Memento Imagen 1"
               class="img"
             />
           </div>
         </div>
-        <div class="section" id="section13">
+        <div class="section" id="section10">
           <div class="img-container">
             <div id="cambioimmagine">
-            <img
-              src="polaroidtattoo/p2vr.jpg"
-              alt="Memento Imagen 1"
-              class="img1"
-            />
-            <img
-            src="polaroidtattoo/rTedn1.jpg"
-            alt="Memento Imagen 1"
-            class="img2"
-          />
-          </div>
+              <img
+                src="polaroidtattoo/fact6.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/rTedn1.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+              <div class="section" id="section10">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/thefacts.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> <div class="section" id="section12">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/johng.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div>  <div class="section" id="section14">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/C.Natalie.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.shehas.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                    <div class="section" id="section16">
+                      <div class="img-container">
+                        <div id="cambioimmagine">
+                          <img
+                            src="polaroidtattoo/Bdrugdealer.jpg"
+                            alt="Memento Imagen 1"
+                            class="img1"
+                          />
+                          <img
+                            src="polaroidtattoo/C.drugdealerretro.jpg"
+                            alt="Memento Imagen 1"
+                            class="img2"
+                          />
+                <div class="section" id="section16">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/C.Doddscritta.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> <div class="section" id="section18">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/C.Dodd.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> <div class="section" id="section19">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/fact5.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> <div class="section" id="section20">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/C.Natalie.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.donot.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                <div class="section" id="section23">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/never.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> <div class="section" id="section26">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/C.Natalie.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> <div class="section" id="section26">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/remember.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> <div class="section" id="section29">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/C.capezzolo.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> <div class="section" id="section29">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/remember.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> <div class="section" id="section32">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/fact5.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div>
+              <div class="section" id="section32">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/fact6.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div><div class="section" id="section32">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/findhim.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div>
+              <div class="section" id="section32">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/B.Teddy.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.heistheone.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"/>
+              
+              <div class="section" id="section35">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/B.Teddy.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div><div class="section" id="section36">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/C.cricchetto.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div>
+              <div class="section" id="section37">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/Bdrugdealer.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div>
+              <div class="section" id="section38">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/C.capezzolo.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div>
+              <div class="section" id="section38">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/Bdrugdealer.jpg"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> 
+              <div class="section" id="section40">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/B.Teddy.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.Dontbelieve.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                      />
+                      <div class="section" id="section42">
+                        <div class="img-container">
+                          <img
+                            src="polaroidtattoo/remember.jpg"
+                            alt="Memento Imagen 1"
+                            class="img"
+                          />
+                      </div>
+
+
+
+
+
+            </div>
           </div>
         </div>
       </div>
@@ -876,7 +1131,6 @@ Partiamo dal montaggio di Nolan
           <div class="box left-box"></div>
           <div class="box left-box"></div>
           <div class="box left-box"></div>
-
         </div>
         <div class="right-column">
           <div class="box right-box"></div>
@@ -926,55 +1180,475 @@ Partiamo dal montaggio di Nolan
         </div>
       </div>
     </section>
-    <br><br><br><br><br>
-  
-        <br /><br /><br /><br />
+    <br /><br /><br /><br /><br />
 
-        <a name="conclusione"></a>
+    <br /><br /><br /><br />
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-        <article>
-          <div class="stepcg" >
-            <p>
-              Nolan si sofferma sull'idea di verità: che cos'è realmente?
-            </p>
-          </div>
-        
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-          <br /><br /><br /><br />
-          <div class="step2" >
-            <p>
-              Il regista dimostra che la linea che separa realtà e immaginazione è estremamente labile.
-               Sta allo spettatore comprenderlo: quello di Nolan, infatti, 
-               può essere definito una sorta di cinema interattivo, in cui lo spettatore, 
-               a differenza di Leonard, può sentirsi libero di fidarsi delle proprie percezioni e 
-               sensazione nell’attribuire un significato alle cose.</p>
-          </div>
-        
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        
-          <br /><br /><br /><br />
-          <div class="step12" >
-            <p>
-             Forse Leonard non è interessato a scoprire la verità, 
-              quanto piuttosto a raggiungere una verità che si adatti alle proprie necessità. </p>
-          </div>
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        
-          <br /><br /><br /><br />
-          <div class="stepcg" >
-            <p>
-            Quanto ci si può fidare realmente dei nostri stessi ricordi? </p>
-          </div>
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-           </article>
-        
-          
-        
-          <br><br><br><br><br>
-  
-          <br /><br /><br /><br />
+<br/>
+<br/>
+<br/>
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+
+    <a name="conclusione"></a>
+
+    <article>
+      <div class="stepcg">
+        <p>Nolan si sofferma sull'idea di verità: che cos'è realmente?</p>
+      </div>
+
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <div class="step2">
+        <p>
+          Il regista dimostra che la linea che separa realtà e immaginazione è
+          estremamente labile. Sta allo spettatore comprenderlo: quello di
+          Nolan, infatti, può essere definito una sorta di cinema interattivo,
+          in cui lo spettatore, a differenza di Leonard, può sentirsi libero di
+          fidarsi delle proprie percezioni e sensazione nell’attribuire un
+          significato alle cose.
+        </p>
+      </div>
+
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <br /><br /><br /><br />
+      <div class="step12">
+        <p>
+          Forse Leonard non è interessato a scoprire la verità, quanto piuttosto
+          a raggiungere una verità che si adatti alle proprie necessità.
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <br /><br /><br /><br />
+      <div class="stepcg">
+        <p>Quanto ci si può fidare realmente dei nostri stessi ricordi?</p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </article>
+
+    <br /><br /><br /><br /><br />
+
+    <br /><br /><br /><br />
 
     <footer>
       <p>© 2023 Memento Website</p>
@@ -1007,7 +1681,5 @@ Partiamo dal montaggio di Nolan
       //   showImage(currentIndex);
       // });
     </script>
-
- 
   </body>
 </html>
