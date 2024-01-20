@@ -235,52 +235,57 @@ ul#menu li.active, ul#menu li:hover {
     text-align: center;
     padding: 20px;
     font-size: 35px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
-    font-family: "stevie-sans", sans-serif;                                        
+    font-family: "museo-sans-rounded", sans-serif;
     font-weight: 400;
     font-style: normal;
     max-width: 1000px;
     align-items: center;
   }
+  
+  /*rgb(255, 255, 255, 0.7);*/
 
   .stepcg  {
     margin: 0 auto;
 
     text-align: center;
-    padding: 20px;
-    font-size: 50px;
-    background-color: rgb(255, 255, 255, 0.7);
+    padding: 1px;
+    font-size: 55px;
+    background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
-    font-family: "stevie-sans", sans-serif;                                        
+    font-family: "museo-sans-rounded", sans-serif;
     font-weight: 700;
     font-style: normal;
     max-width: 1000px;
     align-items: center;
+    font-family: "museo-sans", sans-serif;
+font-weight: 700;
   }
 
 
   .step11 p {
     text-align: left;
-    padding-left: 90px;
-    padding-top: 5px;
+    margin-left: 85px;
+    padding: 2px;
     font-size: 35px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
 
     max-width: 1000px;
-    font-family: "museo-sans", sans-serif;
+    font-family: "museo-sans-rounded", sans-serif;
 font-weight: 300;
 font-style: normal;
   }
 
   .step12 p {
     text-align: left;
-    padding: 90px;
+    padding: 2px;
+    margin-left: 85px;
     font-size: 35px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
-    font-family: "museo-sans", sans-serif;
+    font-family: "museo-sans-rounded", sans-serif;
     font-weight: 300;
     font-style: normal;
     max-width: 570px;
@@ -288,25 +293,28 @@ font-style: normal;
 
   .step13 p {
     text-align: left;
-    padding: 90px;
+    padding: 2px;
+    margin-left: 85px;
     font-size: 35px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
-    font-family: "museo-sans", sans-serif;
+    font-family: "museo-sans-rounded", sans-serif;
     font-weight: 300;
     font-style: normal;
-    max-width: 1000px;
+    max-width: 700px;
   }
 
   .step2 p {
     text-align: right;
-    padding: 90px;
+    padding: 2px;
     font-size: 35px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
-    font-family: "museo-sans", sans-serif;
+    font-family: "museo-sans-rounded", sans-serif;
     font-weight: 300;
     font-style: normal;
+    max-width: 900px;
+    margin-left: 28%;
 
   }
 
