@@ -448,7 +448,7 @@ font-style: normal;
       .right-column {
         display: flex;
         flex-direction: column;
-        gap: 3;
+        gap: 3px;
       }
       .box {
         width: 9.5px;
