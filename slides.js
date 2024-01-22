@@ -218,7 +218,7 @@ let activeIndex = 0;
 function setActiveSection() {
   const scrollPosition = window.scrollY + 500;
   //cambio 11000 in base a dove voglio farlo finire
-  if((scrollPosition >= 7000)&&(scrollPosition <=26900) ){
+  if((scrollPosition >= 7400)&&(scrollPosition <=26900) ){
     boxContainer.classList.add("is-active")
   } else{
     boxContainer.classList.remove("is-active")
@@ -262,8 +262,8 @@ window.addEventListener('scroll', setActiveSection);
 
 
   var announcementContainer = document.getElementById('announcement-container');
-  var showPosition = 6800; // Scroll position to show the announcement
-  var hidePosition = 8000; // Scroll position to hide/remove the announcement
+  var showPosition = 6500; // Scroll position to show the announcement
+  var hidePosition = 7500; // Scroll position to hide/remove the announcement
 
   // Check the scroll position and show/hide the announcement accordingly
   window.onscroll = function() {
