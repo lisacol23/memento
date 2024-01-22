@@ -82,8 +82,11 @@ ul#menu li.active, ul#menu li:hover {
   height:fit-content;
 }
   
-  
 
+#titolo {
+  height: 100%;
+  width: 100%;
+}
 
   #schema {
     width: 1000px;
