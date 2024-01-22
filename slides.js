@@ -258,3 +258,22 @@ function setActiveSection() {
 }
 
 window.addEventListener('scroll', setActiveSection);
+
+
+
+  var announcementContainer = document.getElementById('announcement-container');
+  var showPosition = 6800; // Scroll position to show the announcement
+  var hidePosition = 8000; // Scroll position to hide/remove the announcement
+
+  // Check the scroll position and show/hide the announcement accordingly
+  window.onscroll = function() {
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition >= showPosition && scrollPosition < hidePosition) {
+      announcementContainer.style.display = 'block'; // Show the announcement if within the specified range
+    } else {
+      // Hide/remove the announcement if outside the specified range
+      announcementContainer.style.display = 'none';
+    }
+  };
+
