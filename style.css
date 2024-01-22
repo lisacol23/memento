@@ -91,7 +91,7 @@ ul#menu li.active, ul#menu li:hover {
 
   #schema {
     width: 1000px;
-    height: 500px;
+    height: auto;
     z-index: 1;
     display: block;
  margin-left: auto;
