@@ -191,6 +191,10 @@ font-size: 20px;
     float: left; /* elementi su singola riga */
   }
 
+
+#gruppo{
+  margin-top: 40px;
+}
 #logo{
   margin-left: 90%;
   width: 100px;
