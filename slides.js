@@ -218,7 +218,7 @@ let activeIndex = 0;
 function setActiveSection() {
   const scrollPosition = window.scrollY + 500;
   //cambio 11000 in base a dove voglio farlo finire
-  if((scrollPosition >= 8000)&&(scrollPosition <=26900) ){
+  if((scrollPosition >= 8000)&&(scrollPosition <=31900) ){
     boxContainer.classList.add("is-active")
   } else{
     boxContainer.classList.remove("is-active")
