@@ -412,7 +412,7 @@ font-style: normal;
       display: none;
     }
     .imgt{
-      width: 105%;
+      width: 135%;
       height: auto;
       object-fit: contain;
     }
@@ -443,16 +443,16 @@ font-style: normal;
     .left-column {
         display: flex;
         flex-direction: column;
-        gap: 3px;
+        gap: 4.5px;
       }
       .right-column {
         display: flex;
         flex-direction: column;
-        gap: 3px;
+        gap: 4.5px;
       }
       .box {
-        width: 9px;
-        height: 9px;
+        width: 9.5px;
+        height: 9.5px;
         border-radius: 50%;
         border: 1.8px solid rgb(210, 79, 44);
       }
@@ -460,8 +460,8 @@ font-style: normal;
         background-color: rgb(210, 79, 44);
       }
       .box2 {
-        width: 9px;
-        height: 9px;
+        width: 9.5px;
+        height: 9.5px;
         border-radius: 50%;
         border: 1.8px solid rgb(42, 42, 42);
       }
