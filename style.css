@@ -443,12 +443,12 @@ font-style: normal;
     .left-column {
         display: flex;
         flex-direction: column;
-        gap: 4.5px;
+        gap: 2px;
       }
       .right-column {
         display: flex;
         flex-direction: column;
-        gap: 4.5px;
+        gap: 2px;
       }
       .box {
         width: 9.5px;

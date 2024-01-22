@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollama: Sticky Overlay Example</title>
+    <meta name="description" content="Scrollama: Sticky Overlay Example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/etl6wzo.css" />
+  </head>
+
+  <body>
+    <script src="slides.js" defer></script>
+    <script src="memento.js"></script>
+
+    <nav>
+      <ul id="menu">
+        <li><a href="#intro">INTRO</a></li>
+        <li><a href="#grafico">GRAFICO</a></li>
+        <li><a href="#evidenze">EVIDENZE</a></li>
+        <li><a href="#conclusione">CONCLUSIONE</a></li>
+      </ul>
+    </nav>
+
+   
+    <video id="titolo" autoplay muted control>
+      <!-- Includi il video nel tag source -->
+      <source src="memento.mp4" type="video/mp4">
+      Il tuo browser non supporta il tag video.
+   </video>
+    
+  
+
+
+
+     <div class="line-container">
+      <svg width="820" height="738" viewBox="0 0 820 738" fill="none">
+        <path d="M62 15.5L25.5 12L17.5 92L95 99.5L102.5 23.5L69.5 15.5V8L108.5 12L102.5 121L2 113.5L12.5 1.5L62 8L268 106L305.5 100V173.5H229V100L220.5 92V204.5H312.5V92L532.5 8L571 11.5L574.5 88L495 95.5L492.5 32.5L485.5 35.5L487 114.5L582 109.5L579 28L779 102.5L807.5 106L800 180L718.5 166L728 96.5L721.5 93L707 195L811 211L818 96.5L767.5 90.5L171.5 311.5L135.5 320L152 394.5L229 376L213 301L222 296.5L244.5 394.5L148 418L119 311.5L171.5 301L582 226L619 221.5L628.5 302L545.5 308L542.5 229.5H532.5L542.5 332L635.5 323L625 214L577 217.5L456.5 461.5C448.167 455.333 431.3 441.9 430.5 437.5C429.5 432 429 418.5 432 413C435 407.5 436 407 437 403C438 399 442 397.5 442.5 396.5C443 395.5 448 378.5 448 371.5C448 364.5 447 350 447 345.5C447 341 449 335 448 332C447 329 439.5 313.5 439 304C438.6 296.4 419.5 286.5 410 282.5L409 285L372.5 278V281C368.833 280.667 361.2 280.5 360 282.5C358.5 285 349.5 288 349 290.5C348.5 293 348.5 295.5 347 296.5C345.5 297.5 334 310 331 315.5C328 321 325.5 322 325 323C324.5 324 322 327.5 326 331.5C330 335.5 328.5 337 328.5 340.5C328.5 344 329 350.5 330 354.5C331 358.5 333.5 362 334 369C334.5 376 335.5 380.5 337.5 387.5C339.1 393.1 338.167 394.833 337.5 395C336.833 396.833 336.7 401.1 341.5 403.5C346.3 405.9 347.5 408.167 347.5 409C347.833 413 348.6 421.5 349 423.5C349.5 426 352 430 353 430.5C354 431 359 435.5 356 442.5C353 449.5 337.5 462 336.5 463.5C335.5 465 330.5 466 328.5 467.5C326.5 469 315 476 308 477.5C301 479 292.5 486 290.5 486.5C288.5 487 253.5 501.5 252 503C250.5 504.5 239.5 510.5 238 510.5C236.5 510.5 231 510.5 230.5 538.5C230 566.5 225 639.5 224 644.5C223 649.5 221 708.5 220.5 712.5C220.1 715.7 221.333 730.167 222 737H283.5L285 726.5L288 737H513.5L516 728.5L518 737H592.5C591.333 732.5 588.7 718.9 587.5 700.5C586 677.5 581 641.5 579 637C577 632.5 577 617 577 613.5C577 610 574.5 556.5 569 545C564.6 535.8 564.167 519.833 564.5 513C563.167 508.5 557.3 498.2 544.5 493C528.5 486.5 469.761 470.5 460.5 464" stroke="#DB6C34" stroke-width="2"/>
+        </svg>
+          
+          
+          
+      </div>
+
+      <div id="announcement-container">
+        <p>Passa il mouse sulla polaroid per scoprirne l'immagine!</p>
+      </div>
+    
+
+    
+    <script>
+      let path = document.querySelector("path");
+      let pathLength = path.getTotalLength();
+
+      path.style.strokeDasharray = pathLength + " " + pathLength;
+
+      path.style.strokeDashoffset = pathLength;
+
+      window.addEventListener("scroll", () => {
+        // what % down is it?
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        // Length to offset the dashes
+        var drawLength = pathLength * scrollPercentage;
+
+        // Draw in reverse
+        path.style.strokeDashoffset = pathLength - drawLength;
+      });
+    </script>
+
+    <a name="intro"></a>
+    <p></p>
+    <br /><br />
+    <br /><br />
+    <br /><br />
+
+    <article>
+      <div class="step11">
+        <p>
+          Oggi considerato come uno dei film <br>più importanti del nuovo
+          millennio, <br>nel 2002 ricevette anche le candidature <br>ai premi <font color="d24f2c"><b>Oscar</b></font>
+          per miglior sceneggiatura <br>originale e miglior montaggio.
+        </p>
+      
+    
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <div class="step2">
+        <p>
+          I protagonisti dei film di Nolan <br> presentano sempre un rapporto <br>
+        complesso con <font color="d24f2c"><b>realtà</b></font> e <font color="d24f2c"><b>memoria</b></font> <br> e il
+        regista si diverte a
+        raccontarne <br>le gesta giocando con il tempo, <br> o per meglio dire,
+        utilizzando una<br> struttura temporale <font color="d24f2c"><b> non lineare.</b></font>
+        </p>
+      </div>
+
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <br /><br /><br /><br />
+      <div class="step12">
+        <p>
+          Leonard Shelby in Memento <br> mette in discussione i suoi <font color="d24f2c"><b>ricordi</b></font>, <br> il
+          tempo continua a giocare <br> un ruolo chiave nella storia.
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <br /><br /><br /><br />
+      <div class="step2">
+        <p>
+          Il regista ci fa credere che ci dobbiamo <br> fidare solo dei <font color="d24f2c"><b>tatuaggi</b></font>
+          e delle <font color="d24f2c"><b>polaroid</b></font>, <br> dati come <font color="d24f2c"><b>evidenze</b></font>,
+          perché il protagonista <br> non
+          avendo memoria a lungo termine li<br> utilizza come strumenti che gli
+          permettono<br> di orientarsi nella vita quotidiana.
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br />
+    </article>
+    <article>
+      <div class="stepcg">
+        <p>Ma possiamo ritenere questi dati davvero oggettivi?</p>
+        <!-- al centro grande-->
+      </div>
+      
+      <br /><br /><br /><br />
+      <br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <div class="stepc">
+        <p>
+          Per capirlo, o almeno provarci, abbiamo provato a rileggere la storia
+          da un punto di vista diverso...
+        </p>
+        <!-- al centro grande-->
+      </div>
+      <br /><br /><br /><br />
+      <br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+
+      <div class="stepcg">
+        <p>Partiamo dal montaggio di Nolan</p>
+        <!-- al centro grande-->
+      </div>
+      
+      <br /><br /><br /><br />
+      <br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+
+      <div class="step13">
+        <p>
+          Il <font color="d24f2c"><b>montaggio</b></font> prevede che la storia <br> alterni ogni 15 minuti una
+          scena <br> cronologicamente opposta alla precedente. <br>La pellicola parte
+          quindi dalla fine <br> e si conclude poco dopo la metà,<br> alternando
+          scene in bianco e nero e a colori.
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </article>
+
+    <a name="grafico"></a>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <img id="schema" src="schema (1)_Tavola disegno 1.png" />
+
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <article>
+      <div class="stepcg">
+        <p>
+          Ci siamo chiesti: <br> quanto la soggettività del protagonista interferisce con la presunta veridicità delle
+        evidenze?
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <br /><br /><br /><br />
+      <div class="step11">
+        <p>
+          Adesso ti proponiamo un'analisi delle scene <br> ricostruendo l'<font color="d24f2c"><b>ordine cronologico</b>
+          </font> degli eventi, <br> attraverso una rilettura delle evidenze: <br> polaroid e tatuaggi,
+          che rappresentano l'unico <br>punto di riferimento oggettivo per il protagonista.
+        </p>
+      </div>
+    </article>
+
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script type="text/javascript">
+      (function (global, factory) {
+        typeof exports === "object" && typeof module !== "undefined"
+          ? (module.exports = factory())
+          : typeof define === "function" && define.amd
+          ? define(factory)
+          : ((global = global || self), (global.scrollama = factory()));
+      })(this, function () {
+        "use strict";
+
+        // DOM helper functions
+
+        // public
+        function selectAll(selector, parent = document) {
+          if (typeof selector === "string") {
+            return Array.from(parent.querySelectorAll(selector));
+          } else if (selector instanceof Element) {
+            return [selector];
+          } else if (selector instanceof NodeList) {
+            return Array.from(selector);
+          } else if (selector instanceof Array) {
+            return selector;
+          }
+          return [];
+        }
+
+        // SETUP
+        function create(className) {
+          const el = document.createElement("div");
+          el.className = `scrollama__debug-step ${className}`;
+          el.style.position = "fixed";
+          el.style.left = "0";
+          el.style.width = "100%";
+          el.style.zIndex = "9999";
+
+          const p = document.createElement("p");
+          p.style.position = "absolute";
+          p.style.left = "0";
+          p.style.height = "1px";
+          p.style.width = "100%";
+
+          el.appendChild(p);
+          document.body.appendChild(el);
+          return el;
+        }
+
+        // UPDATE
+        function update({ id, step, marginTop }) {
+          const { index, height } = step;
+          const className = `scrollama__debug-step--${id}-${index}`;
+          let el = document.querySelector(`.${className}`);
+          if (!el) el = create(className);
+
+          el.style.top = `${marginTop * -1}px`;
+          el.style.height = `${height}px`;
+          el.querySelector("p").style.top = `${height / 2}px`;
+        }
+
+        function generateId() {
+          const alphabet = "abcdefghijklmnopqrstuvwxyz";
+          const date = Date.now();
+          const result = [];
+          for (let i = 0; i < 6; i += 1) {
+            const char = alphabet[Math.floor(Math.random() * alphabet.length)];
+            result.push(char);
+          }
+          return `${result.join("")}${date}`;
+        }
+
+        function err$1(msg) {
+          console.error(`scrollama error: ${msg}`);
+        }
+
+        function getIndex(node) {
+          return +node.getAttribute("data-scrollama-index");
+        }
+
+        function createProgressThreshold(height, threshold) {
+          const count = Math.ceil(height / threshold);
+          const t = [];
+          const ratio = 1 / count;
+          for (let i = 0; i < count + 1; i += 1) {
+            t.push(i * ratio);
+          }
+          return t;
+        }
+
+        function parseOffset(x) {
+          if (typeof x === "string" && x.indexOf("px") > 0) {
+            const v = +x.replace("px", "");
+            if (!isNaN(v)) return { format: "pixels", value: v };
+            else {
+              err("offset value must be in 'px' format. Fallback to 0.5.");
+              return { format: "percent", value: 0.5 };
+            }
+          } else if (typeof x === "number" || !isNaN(+x)) {
+            if (x > 1) err("offset value is greater than 1. Fallback to 1.");
+            if (x < 0) err("offset value is lower than 0. Fallback to 0.");
+            return { format: "percent", value: Math.min(Math.max(0, x), 1) };
+          }
+          return null;
+        }
+
+        function indexSteps(steps) {
+          steps.forEach((step) =>
+            step.node.setAttribute("data-scrollama-index", step.index)
+          );
+        }
+
+        function getOffsetTop(node) {
+          const { top } = node.getBoundingClientRect();
+          const scrollTop = window.pageYOffset;
+          const clientTop = document.body.clientTop || 0;
+          return top + scrollTop - clientTop;
+        }
+
+        let currentScrollY;
+        let comparisonScrollY;
+        let direction;
+
+        function onScroll(container) {
+          const scrollTop = container
+            ? container.scrollTop
+            : window.pageYOffset;
+
+          if (currentScrollY === scrollTop) return;
+          currentScrollY = scrollTop;
+          if (currentScrollY > comparisonScrollY) direction = "down";
+          else if (currentScrollY < comparisonScrollY) direction = "up";
+          comparisonScrollY = currentScrollY;
+        }
+
+        function setupScroll(container) {
+          currentScrollY = 0;
+          comparisonScrollY = 0;
+          document.addEventListener("scroll", () => onScroll(container));
+        }
+
+        function scrollama() {
+          let cb = {};
+
+          let id = generateId();
+          let steps = [];
+          let globalOffset;
+          let containerElement;
+          let rootElement;
+
+          let progressThreshold = 0;
+
+          let isEnabled = false;
+          let isProgress = false;
+          let isDebug = false;
+          let isTriggerOnce = false;
+
+          let exclude = [];
+
+          /* HELPERS */
+          function reset() {
+            cb = {
+              stepEnter: () => {},
+              stepExit: () => {},
+              stepProgress: () => {},
+            };
+            exclude = [];
+          }
+
+          function handleEnable(shouldEnable) {
+            if (shouldEnable && !isEnabled) updateObservers();
+            if (!shouldEnable && isEnabled) disconnectObservers();
+            isEnabled = shouldEnable;
+          }
+
+          /* NOTIFY CALLBACKS */
+          function notifyProgress(element, progress) {
+            const index = getIndex(element);
+            const step = steps[index];
+            if (progress !== undefined) step.progress = progress;
+            const response = { element, index, progress, direction };
+            if (step.state === "enter") cb.stepProgress(response);
+          }
+
+          function notifyStepEnter(element, check = true) {
+            const index = getIndex(element);
+            const step = steps[index];
+            const response = { element, index, direction };
+
+            step.direction = direction;
+            step.state = "enter";
+
+            // if (isPreserveOrder && check && direction !== "up")
+            //   notifyOthers(index, "above");
+            // if (isPreserveOrder && check && direction === "up")
+            //   notifyOthers(index, "below");
+
+            if (!exclude[index]) cb.stepEnter(response);
+            if (isTriggerOnce) exclude[index] = true;
+          }
+
+          function notifyStepExit(element, check = true) {
+            const index = getIndex(element);
+            const step = steps[index];
+
+            if (!step.state) return false;
+
+            const response = { element, index, direction };
+
+            if (isProgress) {
+              if (direction === "down" && step.progress < 1)
+                notifyProgress(element, 1);
+              else if (direction === "up" && step.progress > 0)
+                notifyProgress(element, 0);
+            }
+
+            step.direction = direction;
+            step.state = "exit";
+
+            cb.stepExit(response);
+          }
+
+          /* OBSERVERS - HANDLING */
+          function resizeStep([entry]) {
+            const index = getIndex(entry.target);
+            const step = steps[index];
+            const h = entry.target.offsetHeight;
+            if (h !== step.height) {
+              step.height = h;
+              disconnectObserver(step);
+              updateStepObserver(step);
+              updateResizeObserver(step);
+            }
+          }
+
+          function intersectStep([entry]) {
+            onScroll(containerElement);
+
+            const { isIntersecting, target } = entry;
+            if (isIntersecting) notifyStepEnter(target);
+            else notifyStepExit(target);
+          }
+
+          function intersectProgress([entry]) {
+            const index = getIndex(entry.target);
+            const step = steps[index];
+            const { isIntersecting, intersectionRatio, target } = entry;
+            if (isIntersecting && step.state === "enter")
+              notifyProgress(target, intersectionRatio);
+          }
+
+          /*  OBSERVERS - CREATION */
+          function disconnectObserver({ observers }) {
+            Object.keys(observers).map((name) => {
+              observers[name].disconnect();
+            });
+          }
+
+          function disconnectObservers() {
+            steps.forEach(disconnectObserver);
+          }
+
+          function updateResizeObserver(step) {
+            const observer = new ResizeObserver(resizeStep);
+            observer.observe(step.node);
+            step.observers.resize = observer;
+          }
+
+          function updateResizeObservers() {
+            steps.forEach(updateResizeObserver);
+          }
+
+          function updateStepObserver(step) {
+            const h = window.innerHeight;
+            const off = step.offset || globalOffset;
+            const factor = off.format === "pixels" ? 1 : h;
+            const offset = off.value * factor;
+            const marginTop = step.height / 2 - offset;
+            const marginBottom = step.height / 2 - (h - offset);
+            const rootMargin = `${marginTop}px 0px ${marginBottom}px 0px`;
+            const root = rootElement;
+
+            const threshold = 0.5;
+            const options = { rootMargin, threshold, root };
+            const observer = new IntersectionObserver(intersectStep, options);
+
+            observer.observe(step.node);
+            step.observers.step = observer;
+
+            if (isDebug) update({ id, step, marginTop, marginBottom });
+          }
+
+          function updateStepObservers() {
+            steps.forEach(updateStepObserver);
+          }
+
+          function updateProgressObserver(step) {
+            const h = window.innerHeight;
+            const off = step.offset || globalOffset;
+            const factor = off.format === "pixels" ? 1 : h;
+            const offset = off.value * factor;
+            const marginTop = -offset + step.height;
+            const marginBottom = offset - h;
+            const rootMargin = `${marginTop}px 0px ${marginBottom}px px`;
+
+            const threshold = createProgressThreshold(
+              step.height,
+              progressThreshold
+            );
+            const options = { rootMargin, threshold };
+            const observer = new IntersectionObserver(
+              intersectProgress,
+              options
+            );
+
+            observer.observe(step.node);
+            step.observers.progress = observer;
+          }
+
+          function updateProgressObservers() {
+            steps.forEach(updateProgressObserver);
+          }
+
+          function updateObservers() {
+            disconnectObservers();
+            updateResizeObservers();
+            updateStepObservers();
+            if (isProgress) updateProgressObservers();
+          }
+
+          /* SETUP */
+          const S = {};
+
+          S.setup = ({
+            step,
+            parent,
+            offset = 0.5,
+            threshold = 4,
+            progress = false,
+            once = false,
+            debug = false,
+            container = undefined,
+            root = null,
+          }) => {
+            setupScroll(container);
+
+            steps = selectAll(step, parent).map((node, index) => ({
+              index,
+              direction: undefined,
+              height: node.offsetHeight,
+              node,
+              observers: {},
+              offset: parseOffset(node.dataset.offset),
+              top: getOffsetTop(node),
+              progress: 0,
+              state: undefined,
+            }));
+
+            if (!steps.length) {
+              err$1("no step elements");
+              return S;
+            }
+
+            isProgress = progress;
+            isTriggerOnce = once;
+            isDebug = debug;
+            progressThreshold = Math.max(1, +threshold);
+            globalOffset = parseOffset(offset);
+            containerElement = container;
+            rootElement = root;
+
+            reset();
+            indexSteps(steps);
+            handleEnable(true);
+            return S;
+          };
+
+          S.enable = () => {
+            handleEnable(true);
+            return S;
+          };
+
+          S.disable = () => {
+            handleEnable(false);
+            return S;
+          };
+
+          S.destroy = () => {
+            handleEnable(false);
+            reset();
+            return S;
+          };
+
+          S.resize = () => {
+            updateObservers();
+            return S;
+          };
+
+          S.offset = (x) => {
+            if (x === null || x === undefined) return globalOffset.value;
+            globalOffset = parseOffset(x);
+            updateObservers();
+            return S;
+          };
+
+          S.onStepEnter = (f) => {
+            if (typeof f === "function") cb.stepEnter = f;
+            else err$1("onStepEnter requires a function");
+            return S;
+          };
+
+          S.onStepExit = (f) => {
+            if (typeof f === "function") cb.stepExit = f;
+            else err$1("onStepExit requires a function");
+            return S;
+          };
+
+          S.onStepProgress = (f) => {
+            if (typeof f === "function") cb.stepProgress = f;
+            else err$1("onStepProgress requires a function");
+            return S;
+          };
+          return S;
+        }
+
+        return scrollama;
+      });
+    </script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      var main = document.querySelector("main");
+      var scrolly = main.querySelector("#scrolly");
+      var sticky = scrolly.querySelector(".sticky-thing");
+      var article = scrolly.querySelector("article");
+      var steps = article.querySelectorAll(".step");
+
+      var scroller = scrollama();
+
+      function handleStepEnter(response) {
+        var el = response.element;
+
+        steps.forEach((step) => step.classList.remove("is-active"));
+        el.classList.add("is-active");
+
+        sticky.querySelector("p").innerText = el.dataset.step;
+
+        // Aggiungi linee arancioni l'1 dice quante linee mettere al 1 step
+        createOrangeLines(response.index + 1); // Passa l'indice dello step per determinare il numero di linee
+      }
+
+      function createOrangeLines(lineCount) {
+        var linesData = Array.from({ length: lineCount }, (_, i) => i + 1);
+
+        var isVertical = Math.random() < 0.2; // Decide se le linee saranno orizzontali o verticali
+
+        var lines = d3
+          .select(".orange-lines")
+          .selectAll("line")
+          .data(linesData);
+
+        lines
+          .enter()
+          .append("line")
+          .attr("class", "orange-line")
+          .attr("x1", isVertical ? () => Math.random() * sticky.offsetWidth : 0)
+          .attr(
+            "y1",
+            isVertical ? 0 : () => Math.random() * sticky.offsetHeight
+          )
+          .attr(
+            "x2",
+            isVertical
+              ? () => Math.random() * sticky.offsetWidth
+              : sticky.offsetWidth
+          )
+          .attr(
+            "y2",
+            isVertical ? 0 : () => Math.random() * sticky.offsetHeight
+          );
+        lines.exit().remove();
+      }
+
+      function init() {
+        scroller
+          .setup({
+            step: "#scrolly article .step",
+            offset: 0.33,
+            debug: true,
+          })
+          .onStepEnter(handleStepEnter);
+
+        window.addEventListener;
+        window.addEventListener("resize", scroller.resize);
+      }
+      init();
+    </script>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!-- INIZIO PARTE POLAROID-->
+    <a name="evidenze"></a>
+
+    <section id="content">
+
+      <div class="image-container">
+
+        
+
+
+         
+        <div class="section" id="section2">
+            <div class="img-container">
+  
+                <img
+                  src="polaroidtattoo/remember n .PNG"
+                  alt="Memento Imagen 1"
+                  class="img"
+                />
+       
+            </div>
+          </div>
+
+          <br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+
+        <div class="section" id="section9">
+          <div class="img-container">
+  
+            <img
+              src="polaroidtattoo/fact 5 N .PNG"
+              alt="Memento Imagen 1"
+              class="imgt"
+            />
+   
+        </div>
+      </div>
+
+
+
+        
+        <div class="section" id="section11">
+          <div class="img-container">
+  
+            <img
+              src="polaroidtattoo/never N.PNG"
+              alt="Memento Imagen 1"
+              class="img"
+            />
+   
+        </div>
+      </div>
+
+
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <div class="section" id="section14">
+          <div class="img-container">
+            <div id="cambioimmagine">
+              <img
+                src="polaroidtattoo/retroneutro.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/C.capezzolo.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+            </div>
+          </div> </div>
+
+
+          <br /><br /><br /><br /><br />
+          <div class="section" id="section14">
+            <div class="img-container">
+  
+              <img
+                src="polaroidtattoo/remember n .PNG"
+                alt="Memento Imagen 1"
+                class="img"
+              />
+     
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <div class="section" id="section17">
+          <div class="img-container">
+            <div id="cambioimmagine">
+              <img
+                src="polaroidtattoo/retroneutro.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/B.Teddy.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+            </div>
+          </div> </div>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        
+        <div class="section" id="section18">
+          <div class="img-container">
+            <div id="cambioimmagine">
+              <img
+                src="polaroidtattoo/retroneutro.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/B.drugdealer.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+            </div>
+          </div> </div>
+
+
+        <div class="section" id="section22">
+          <div class="img-container">
+            <img
+              src="polaroidtattoo/remember n .PNG"
+              alt="Memento Imagen 1"
+              class="img"
+            />
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <div class="section" id="section23">
+          <div class="img-container">
+            <div id="cambioimmagine">
+              <img
+                src="polaroidtattoo/C.Dontbelieve.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/B.Teddy.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+            </div>
+          </div> </div>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <div class="section" id="section24">
+          <div class="img-container">
+            <div id="cambioimmagine">
+              <img
+                src="polaroidtattoo/retroneutro.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/B.drugdealer.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+            </div>
+          </div> </div>
+
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="section" id="section24">
+          <div class="img-container">
+            <div id="cambioimmagine">
+              <img
+                src="polaroidtattoo/retroneutro.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/C.capezzolo.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+            </div>
+          </div> </div>
+
+
+        <div class="section" id="section27">
+          <div class="img-container">
+            <img
+              src="polaroidtattoo/fact 5 N .PNG"
+              alt="Memento Imagen 1"
+              class="img"
+            />
+          </div>
+        </div>
+        <br /><br /><br /><br /><br />
+
+        <div class="section" id="section27">
+          <div class="img-container">
+            <img
+              src="polaroidtattoo/FACT 6 NUOVO.png"
+              alt="Memento Imagen 1"
+              class="img"
+            />
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <div class="section" id="section27">
+          <div class="img-container">
+            <div id="cambioimmagine">
+              <img
+                src="polaroidtattoo/C.heistheone.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/B.Teddy.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+            </div>
+          </div> </div>
+
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <div class="section" id="section30">
+          <div class="img-container">
+            <div id="cambioimmagine">
+              <img
+                src="polaroidtattoo/retroneutro.jpg"
+                alt="Memento Imagen 1"
+                class="img1"
+              />
+              <img
+                src="polaroidtattoo/C.Natalie.jpg"
+                alt="Memento Imagen 1"
+                class="img2"
+              />
+            </div>
+          </div> </div>
+
+
+
+              <div class="section" id="section30">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/remember n .PNG"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> 
+              
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              <div class="section" id="section33">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/C.donot.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.Natalie.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                  </div>
+                </div> </div>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              
+              <div class="section" id="section34">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/retroneutro.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.Dodd.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                  </div>
+                </div> </div>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <div class="section" id="section35">
+                      <div class="img-container">
+                        <div id="cambioimmagine">
+                          <img
+                            src="polaroidtattoo/C.drugdealerretro.jpg"
+                            alt="Memento Imagen 1"
+                            class="img1"
+                          />
+                          <img
+                            src="polaroidtattoo/B.drugdealer.jpg"
+                            alt="Memento Imagen 1"
+                            class="img2"
+                          />
+                        </div>
+                      </div> </div>
+
+                      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+                <div class="section" id="section35">
+                  <div class="img-container">
+                    <div id="cambioimmagine">
+                      <img
+                        src="polaroidtattoo/retroneutro.jpg"
+                        alt="Memento Imagen 1"
+                        class="img1"
+                      />
+                      <img
+                        src="polaroidtattoo/C.Doddscritta.jpg"
+                        alt="Memento Imagen 1"
+                        class="img2"
+                      />
+                    </div>
+                  </div> </div>
+                  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              <div class="section" id="section36">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/C.shehas.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.Natalie.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                  </div>
+                </div> </div>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              <div class="section" id="section37">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/john g NUOVO.PNG"
+                    alt="Memento Imagen 1"
+                    class="imgt"
+                  />
+                </div>
+              </div> 
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+              <div class="section" id="section38">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/find him n .PNG"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> 
+
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+                <div class="section" id="section38">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/photograph n .PNG"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div>
+
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+              <div class="section" id="section38">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/the facts n.PNG"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> 
+              
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+              <div class="section" id="section38">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/fact 5 N .PNG"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div>
+              
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+              <div class="section" id="section39">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/retroneutro.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.jaguar.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                  </div>
+                </div> </div>
+
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+              <div class="section" id="section39">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/retroneutro.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.Inn.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                  </div>
+                </div> </div>
+
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+              <div class="section" id="section40">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/retroneutro.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.teddytelefono.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                  </div>
+                </div> </div>
+              
+        
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+              
+              <div class="section" id="section40">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/the facts n.PNG"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div> 
+              
+              <div class="section" id="section40">
+                <div class="img-container">
+                  <img
+                    src="polaroidtattoo/remember n .PNG"
+                    alt="Memento Imagen 1"
+                    class="img"
+                  />
+                </div>
+              </div>
+
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+              <div class="section" id="section41">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/retroneutro.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.teddytelefono.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                  </div>
+                </div> </div>
+              
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+              <div class="section" id="section41">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/retroneutro.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.jaguar.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                  </div>
+                </div> </div>
+
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+              <div class="section" id="section42">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/retroneutro.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.teddytelefono.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"/>
+               </div> </div> </div>
+
+               <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+              <div class="section" id="section43">
+                <div class="img-container">
+                  <div id="cambioimmagine">
+                    <img
+                      src="polaroidtattoo/retroneutro.jpg"
+                      alt="Memento Imagen 1"
+                      class="img1"
+                    />
+                    <img
+                      src="polaroidtattoo/C.mortoocchiali.jpg"
+                      alt="Memento Imagen 1"
+                      class="img2"
+                    />
+                  </div>
+                </div> </div>
+              
+             
+
+
+      </div>
+
+      <!-- agg div per aggiungere pallino-->
+      <div class="box-container">
+        <div class="left-column">
+          <div class="box2 left-box active"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box2 left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+          <div class="box left-box"></div>
+        </div>
+        <div class="right-column">
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box active"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box2 right-box"></div>
+          <div class="box right-box"></div>
+          <div class="box right-box"></div>
+        </div>
+      </div>
+    </section>
+    <br /><br /><br /><br /><br />
+
+    <br /><br /><br /><br />
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+    <a name="conclusione"></a>
+
+    <article>
+      <div class="stepcg">
+        <p>Nolan si sofferma sull'idea di verità: che cos'è realmente?</p>
+      </div>
+
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <div class="step2">
+        <p>
+          Il regista dimostra che la linea che separa realtà e immaginazione è estremamente labile.
+        Sta allo spettatore comprenderlo: quello di Nolan, infatti,
+        può essere definito una sorta di <font color="d24f2c"><b> cinema interattivo</b>
+        </font>, in cui lo spettatore,
+        a differenza di Leonard, può sentirsi libero di fidarsi delle proprie percezioni e
+        sensazione nell’attribuire un significato alle cose.
+        </p>
+      </div>
+
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <br /><br /><br /><br />
+      <div class="step12">
+        <p>
+          Forse Leonard non è interessato a scoprire la <font color="d24f2c"><b>verità</b>
+          </font>,
+          quanto piuttosto a raggiungere una verità che si adatti alle proprie necessità.
+        </p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <br /><br /><br /><br />
+      <div class="stepcg">
+        <p>Quanto ci si può fidare realmente dei nostri stessi ricordi?</p>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </article>
+
+    <br /><br /><br /><br /><br />
+
+    <br /><br /><br /><br />
+    <br /><br /><br /><br /><br />
+
+    <br /><br /><br /><br />
+    
+    <br /><br /><br /><br />
+    <br /><br /><br /><br /><br />
+
+   
+   
+
+    
+      <ul id="footer">
+      <li><p id="gruppo">Gruppo 4</p></li>
+      <li> <img src="logo.png" id="logo" /></li>
+      </ul>
+      <footer>
+    </footer>
+
+
+    <script>
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const images = document.querySelectorAll(".movie-image");
+      //   const circles = document.querySelectorAll(".circle");
+
+      //   let currentIndex = 0;
+
+      //   function showImage(index) {
+      //     images.forEach((image) => image.classList.remove("visible"));
+      //     images[index].classList.add("visible");
+
+      //     circles.forEach((circle) => circle.classList.remove("active"));
+      //     circles[index].classList.add("active");
+      //   }
+
+      //   function nextImage() {
+      //     currentIndex = (currentIndex + 1) % images.length;
+      //     showImage(currentIndex);
+      //   }
+
+      //   document
+      //     .getElementById("nextButton")
+      //     .addEventListener("click", nextImage);
+
+      //   showImage(currentIndex);
+      // });
+    </script>
+    
+  
+  </body>
+
+
+</html>
