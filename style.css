@@ -392,6 +392,7 @@ font-style: normal;
     right: 100px;
     opacity: 0;
     transition: 1s;
+    
     .left-column {
         display: flex;
         flex-direction: column;
@@ -403,19 +404,19 @@ font-style: normal;
         gap: 3px;
       }
       .box {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
         border-radius: 50%;
-        border: 1px solid rgb(210, 79, 44);
+        border: 1.8px solid rgb(210, 79, 44);
       }
       .box.active {
         background-color: rgb(210, 79, 44);
       }
       .box2 {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
         border-radius: 50%;
-        border: 1px solid rgb(42, 42, 42);
+        border: 1.8px solid rgb(42, 42, 42);
       }
       .box2.active {
         background-color: rgb(42, 42, 42);
