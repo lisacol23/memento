@@ -34,7 +34,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-10%);
-  width: 80%; /* Adjust the width as needed */
+  width: 40%; /* Adjust the width as needed */
   max-width: 600px;
   background-color: #DB6C34;
   color: white;
@@ -43,7 +43,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 font-family: "museo-sans-rounded", sans-serif;
-font-size: 20px;
+font-size: 19px;
 font-weight: bold;
 
 }
@@ -83,7 +83,7 @@ ul#menu li {
 }
 ul#menu li a {
   color: #000000;
-  font-family: "stevie-sans", sans-serif;                                        
+  font-family: "museo-sans-rounded", sans-serif;
   font-weight: 700;
   font-style: normal;
   display: block;
@@ -167,16 +167,36 @@ ul#menu li.active, ul#menu li:hover {
   }
 
   footer {
- right: 50px;
- bottom: 20%;
-    background-color: #DB6C34;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    margin-bottom: -8px;
+    background-color: #ffffff;
+    color: #864949;
+    text-align: left;
+    margin-bottom: -12px;
+
     margin-left: -8px;
     margin-right: -8px;
+    font-family: "museo-sans-rounded", sans-serif;
+height: 90px;
   }
+
+  ul#footer li {
+    font-family: "museo-sans-rounded", sans-serif;
+    font-weight: bold;
+font-size: 20px;
+    margin-bottom: 0px;
+    margin: 0 auto;
+    background-color: #ffffff ;
+    display: block;
+    width: 47%;
+    height: 60px;
+    float: left; /* elementi su singola riga */
+  }
+
+#logo{
+  margin-left: 90%;
+  width: 100px;
+  height: 70px;
+  margin-bottom: 10px;
+}
 
   .movie-image {
     margin-left: 500px;
