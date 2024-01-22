@@ -77,17 +77,17 @@ ul#menu li.active, ul#menu li:hover {
   border-bottom: 5px solid #d24f2c;
 }
 
-
-
-#titolo {
-    height: 100%;
-    width: 100%;
-  }
+#grandezzaschermo {
+  width:fit-content;
+  height:fit-content;
+}
+  
+  
 
 
   #schema {
     width: 1000px;
-    height: 400px;
+    height: 500px;
     z-index: 1;
     display: block;
  margin-left: auto;
@@ -145,7 +145,7 @@ ul#menu li.active, ul#menu li:hover {
   footer {
  right: 50px;
  bottom: 20%;
-    background-color: rgb(210, 79, 44);;
+    background-color: #fff;
     color: #fff;
     text-align: center;
     padding: 1em 0;
